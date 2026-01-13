@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Fonts: Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Verdafin</title>
+  </head>
+
+  <body class="font-sans antialiased bg-offwhite text-text-primary">
+    <!-- HEADER -->
+    <header class="w-full bg-white">
+      <div
+        class="mx-auto flex max-w-6xl items-baseline justify-between px-6 py-[20px] md:px-12 lg:px-20"
+      >
+        <!-- Logo -->
+        <div class="flex items-baseline text-text-secondary">
+          <img
+            src="/assets/images/logo.svg"
+            alt="Verdafin"
+            class="h-[80px] w-[126px] object-contain"
+          />
+        </div>
+
+        <!-- Navigation -->
+        <nav
+          class="hidden items-baseline gap-6 text-sm font-medium text-text-secondary md:flex"
+        >
+          <a href="#" class="hover:text-text-primary transition">About Us</a>
+          <span class="text-text-muted">|</span>
+          <a href="#" class="hover:text-text-primary transition">
+            Our Products
+          </a>
+          <span class="text-text-muted">|</span>
+          <a href="#" class="hover:text-text-primary transition">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative isolate w-full min-h-[calc(100vh-5rem)]">
+      <!-- Background video -->
+      <video
+        class="absolute inset-0 h-full w-full object-cover"
+        autoplay
+        muted
+        loop
+        playsinline
+      >
+        <source src="/assets/video/hero.mp4" type="video/mp4" />
+      </video>
+
+      <!-- Content -->
+      <div
+        class="relative z-20 mx-auto flex h-full max-w-6xl items-start px-6 pt-24 md:px-12 md:pt-32 lg:px-20 lg:pt-40"
+      >
+        <div class="max-w-2xl">
+          <h1
+            class="mb-20 text-4xl font-bold text-white md:text-5xl lg:text-6xl"
+            style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35)"
+          >
+            <span class="block leading-[1]">Green ideas deserve</span>
+            <span class="block mt-4 leading-[1]">a green light</span>
+          </h1>
+
+          <button
+            class="rounded-full bg-brand-green px-7 py-3.5 text-sm font-semibold text-white shadow-xl hover:bg-brand-greenLight transition"
+          >
+            Discover More
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING GREEN CARD -->
+    <div class="absolute inset-x-0 -bottom-36 z-30">
+      <div
+        class="mx-auto max-w-5xl bg-brand-green px-6 py-10 md:px-10 md:py-18 lg:px-24"
+      >
+        <p class="text-2xl leading-relaxed text-white">
+          We’re Verdafin, and we offer climate financing to green companies and
+          projects nationwide, so India can make bold strides towards a greener
+          future.
+        </p>
+      </div>
+    </div>
+
+    <section class="w-full bg-white pt-36 pb-20 md:pt-40 md:pb-28">
+      <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-20">
+        <!-- Section label -->
+        <span
+          class="inline-block mb-12 rounded-full border border-brand-green px-5 py-2 text-xs font-medium tracking-wide text-text-secondary"
+        >
+          ABOUT US
+        </span>
+
+        <div class="grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-12">
+          <!-- LEFT COLUMN -->
+          <div>
+            <h2
+              class="text-3xl font-bold leading-[1.25] text-brand-green md:text-4xl lg:text-5xl"
+            >
+              A sustainable future begins with sustained capital for innovation.
+            </h2>
+          </div>
+
+          <!-- RIGHT COLUMN -->
+          <div class="flex">
+            <p class="max-w-md text-base leading-relaxed text-text-secondary">
+              Our products are designed to meet the specific needs of innovative
+              green companies across their life cycle. From wind power producers
+              to EV fleet operators, from biofuel manufacturers to solar panel
+              component makers, we power them all.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- ICON STRIP -->
+      <div class="w-full bg-white py-4 md:py-8">
+        <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-20">
+          <div class="flex justify-center">
+            <img
+              src="/assets/images/energy-icons.png"
+              alt="Renewable energy icons: wind, solar, EV charging"
+              class="w-full max-w-5xl h-auto scale-95 md:scale-100"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full bg-brand-blue">
+      <div class="mx-auto max-w-6xl px-6 py-20 md:px-12 md:py-12 lg:px-20">
+        <!-- HEADER ROW -->
+        <div class="flex items-center gap-12">
+          <h2
+            class="text-3xl font-bold text-white md:text-4xl"
+            style="
+              text-shadow: 0 1px 0 rgba(255, 255, 255, 0.25),
+                0 -1px 0 rgba(0, 0, 0, 0.25);
+            "
+          >
+            Climate financing made easier
+          </h2>
+
+          <!-- Down Arrow -->
+          <div
+            class="flexitems-center justify-center rounded-full border border-white"
+          >
+            <img
+              src="/assets/images/arrow-down-w.svg"
+              alt="Scroll down"
+              class="h-10 w-10"
+            />
+          </div>
+        </div>
+
+        <!-- CONTENT ROW -->
+        <div
+          class="mt-16 grid grid-cols-1 gap-12 md:grid-cols-2 md:items-start"
+        >
+          <!-- LEFT CONTENT -->
+          <div>
+            <p
+              class="max-w-2xl text-base leading-relaxed text-white/90 font-medium"
+            >
+              Verdafin is an NBFC designed for climate financing, which powers
+              green companies and projects often overlooked by traditional
+              banks. We fund innovative projects working towards a green,
+              sustainable future, in areas such as renewable energy, energy
+              efficiency and low-carbon technologies. We’re here to help India
+              achieve its bold climate goals, combat climate change and build a
+              sustainable future for the generations to come.
+            </p>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="flex justify-start md:justify-end">
+            <img
+              src="/assets/images/climate-tree.png"
+              alt="Sustainability and nature"
+              class="w-full max-w-md object-cover"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="w-full bg-brand-green">
+        <div
+          class="mx-auto flex h-[100px] max-w-6xl items-center px-6 md:px-12 lg:px-20"
+        >
+          <div class="flex items-center gap-12">
+            <!-- Text -->
+            <h2 class="text-3xl font-semibold text-white md:text-4xl">
+              Powering possibilities for tomorrow
+            </h2>
+
+            <!-- Up Arrow -->
+            <div
+              class="flex items-center justify-center rounded-full border border-white"
+            >
+              <img
+                src="/assets/images/arrow-up-w.svg"
+                alt="Expand"
+                class="h-10 w-10"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full bg-white py-20 md:py-28 mb-36">
+      <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-20">
+        <!-- Heading -->
+        <div class="text-center">
+          <h2
+            class="text-3xl font-bold text-brand-blue md:text-4xl lg:text-5xl"
+          >
+            Led with vision and purpose
+          </h2>
+
+          <p
+            class="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-text-secondary"
+          >
+            At the heart of Verdafin is a leadership team that possesses the
+            experience, expertise and vision to power the unique needs of green
+            companies and make India resilient and future-ready.
+          </p>
+
+          <h3 class="mt-12 text-lg font-bold text-brand-green md:text-xl">
+            Board of Directors
+          </h3>
+        </div>
+
+        <!-- Directors Grid 1 -->
+        <div
+          class="mt-16 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <!-- Card 1 -->
+          <div class="text-center">
+            <div
+              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
+            >
+              <img
+                src="/assets/images/directors/om-prakash-bhatt.png"
+                alt="Mr. Om Prakash Bhatt"
+              />
+            </div>
+
+            <h4 class="mt-6 text-lg font-semibold text-brand-green">
+              Mr. Om Prakash Bhatt
+            </h4>
+
+            <p
+              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
+            >
+              Mr. Bhatt has professional experience of over 40 years in the
+              banking sector. He was the Chairman of the State Bank of India
+              (SBI), the country's largest public sector bank, and during his
+              leadership from 2006 to 2011, he played a key role in transforming
+              the bank, overseeing a remarkable five-fold growth in loans and
+              deposits within just five years. In addition to his role at SBI,
+              he also served as Chairman of the Indian Banks Association (IBA),
+              where he played a significant role in economic diplomacy. He has
+              been on the Global Board of Standard Chartered Bank and various
+              Tata Group companies. Currently, he is on the Board of Coforge,
+              SBI Global Factors Limited, Aadhar Housing Finance and Tata
+              Motors. He was honoured with the 'Banker of the Year' award by
+              Business Standard and the 'CNN-IBN Indian of the Year' award in
+              2007. Mr. Bhatt holds a Bachelor's Degree in Science from DAV
+              College, Dehradun and a Master's Degree in English Literature.
+            </p>
+            <button
+              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
+              data-toggle="bio"
+            >
+              <span>Read more</span>
+              <img
+                src="/assets/images/arrow-down-g.svg"
+                class="h-8 w-8 transition-transform duration-200"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="text-center">
+            <div
+              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
+            >
+              <img
+                src="/assets/images/directors/farokh-subedar.png"
+                alt="Mr. Farokh Subedar"
+              />
+            </div>
+
+            <h4 class="mt-6 text-lg font-semibold text-brand-green">
+              Mr. Farokh Subedar
+            </h4>
+
+            <p
+              id="bio-subedar"
+              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
+            >
+              Mr. Subedar has over 40 years of experience in business
+              management, finance, taxation, law, and accounting. He is
+              currently serving as the Chairman and Independent Director of DCB
+              Bank. Prior to his current role, he served as the Chief Operating
+              Officer of Tata Sons Limited, after having held the positions of
+              Chief Financial Officer and Company Secretary there. He has been
+              on the board of directors of several Tata Group companies and has
+              been closely associated with various Tata Non-Banking Financial
+              Companies throughout his career. His extensive association with
+              the Tata Group spans over 38 years, contributing to the growth and
+              success of the conglomerate. Mr. Subedar also served as the
+              President of the Bombay Chamber of Commerce and Industry and has
+              been actively involved with NGOs across diverse sectors,
+              channeling showcasing his commitment to social causes. He holds a
+              Bachelor's Degree in Commerce and is a Member of the Institute of
+              Chartered Accountants of India and the Institute of Company
+              Secretaries of India.
+            </p>
+
+            <button
+              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
+              data-toggle="bio"
+            >
+              <span>Read more</span>
+              <img
+                src="/assets/images/arrow-down-g.svg"
+                class="h-8 w-8 transition-transform duration-200"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="text-center">
+            <div
+              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
+            >
+              <img
+                src="/assets/images/directors/atul-malik.png"
+                alt="Mr. Atul Malik"
+              />
+            </div>
+
+            <h4 class="mt-6 text-lg font-semibold text-brand-green">
+              Mr. Atul Malik
+            </h4>
+
+            <p
+              id="bio-atul"
+              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
+            >
+              Mr. Malik has professional experience in the banking sector in
+              various roles, where he established, expanded and managed business
+              across developed and emerging markets in Asia. He is currently a
+              Senior Advisor to TPG, contributing to multiple portfolio
+              companies across India and Southeast Asia, including Five Star,
+              Grihum, SK Finance, Kakao Bank, and Union Bank of Colombo. Before
+              joining TPG, Mr. Malik was the Chief Executive Officer (CEO) at
+              Citibank Hong Kong, and prior to taking up this role, he held
+              multiple senior positions during his 20-year tenure there. He also
+              served as the Managing Director and Regional Head of Asia for
+              Private and Business Clients at Deutsche Bank. Additionally, he
+              was the CEO of Maritime Bank, one of the largest private banks in
+              Vietnam, where he led significant business growth. Currently, he
+              is on the Board of Directors of YES Bank, where he chairs the
+              Credit Committee. He has been instrumental in the restructuring
+              for bailing out the Bank. He holds a degree of Master of Business
+              dministration from Rice University in the United States and a
+              Bachelor of Technology Degree from Indian Institute of Technology
+              (IIT) Bombay in India.
+            </p>
+
+            <button
+              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
+              data-toggle="bio"
+            >
+              <span>Read more</span>
+              <img
+                src="/assets/images/arrow-down-g.svg"
+                class="h-8 w-8 transition-transform duration-200"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+
+        <!-- Directors Grid 2 -->
+        <div
+          class="mt-16 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          <!-- Card 4 -->
+          <div class="text-center">
+            <div
+              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
+            >
+              <img
+                src="/assets/images/directors/ankur-thadani.png"
+                alt="Mr. Ankur Thadani"
+              />
+            </div>
+
+            <h4 class="mt-6 text-lg font-semibold text-brand-green">
+              Mr. Ankur Thadani
+            </h4>
+
+            <p
+              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
+            >
+              Mr. Thadani is a Partner and India Head of TPG Growth, RISE and
+              RISE Climate. He has led investments in the healthcare, energy
+              transition, and consumer sectors in India and the South Asia
+              region. Prior to joining TPG in 2013, he worked with an Indian
+              private equity fund, India Equity Partners, focusing on
+              investments in the consumer and healthcare sectors. He serves on
+              the Board of Directors of TATA Passengers Electric Mobility Ltd.,
+              Dr. Agarwal's Health Care Ltd., Learning with N Private Ltd., Rhea
+              Healthcare Private Ltd., Nova Medical Centers Private Ltd. and API
+              Holdings. Mr. Thadani has been recognized by the Economic Times as
+              one of the 40 under 40 Business Leaders in India and is a member
+              of the Indian Venture and Alternate Capital Association's Climate
+              Council. He holds a Master of Business Administration Degree from
+              Indian Institute of Foreign Trade, where he was awarded a Gold
+              Medal for all-round achievement.
+            </p>
+
+            <button
+              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
+              data-toggle="bio"
+            >
+              <span>Read more</span>
+              <img
+                src="/assets/images/arrow-down-g.svg"
+                class="h-8 w-8 transition-transform duration-200"
+                alt=""
+              />
+            </button>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="text-center">
+            <div
+              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
+            >
+              <img
+                src="/assets/images/directors/behzad-bhesania.png"
+                alt="Mr. Behzad Bhesania"
+              />
+            </div>
+
+            <h4 class="mt-6 text-lg font-semibold text-brand-green">
+              Mr. Behzad Bhesania
+            </h4>
+
+            <p
+              id="bio-behzad"
+              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
+            >
+              Mr. Behazad has professional experience in the banking sector in
+              various roles, where he established, expanded and managed business
+              across developed and emerging markets in Asia. He is currently a
+              Senior Advisor to TPG, contributing to multiple portfolio
+              \companies across India and Southeast Asia, including Five Star,
+              Grihum, SK Finance, Kakao Bank, and Union Bank of Colombo. Before
+              joining TPG, Mr. Malik was the Chief Executive Officer (CEO) at
+              Citibank Hong Kong, and prior to taking up this role, he held
+              multiple senior positions during his 20-year tenure there. He also
+              served as the Managing Director and Regional Head of Asia for
+              Private and Business Clients at Deutsche Bank. Additionally, he
+              was the CEO of Maritime Bank, one of the largest private banks in
+              Vietnam, where he led significant business growth. Currently, he
+              is on the Board of Directors of YES Bank, where he chairs the
+              Credit Committee. He has been instrumental in the restructuring
+              for bailing out the Bank. He holds a degree of Master of Business
+              dministration from Rice University in the United States and a
+              Bachelor of Technology Degree from Indian Institute of Technology
+              (IIT) Bombay in India.
+            </p>
+
+            <button
+              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
+              data-toggle="bio"
+            >
+              <span>Read more</span>
+              <img
+                src="/assets/images/arrow-down-g.svg"
+                class="h-8 w-8 transition-transform duration-200"
+                alt=""
+              />
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS WRAPPER -->
+    <section class="relative w-full">
+      <!-- FLOATING GREEN CARD -->
+      <div class="absolute inset-x-0 -top-32 z-10">
+        <div
+          class="mx-auto max-w-5xl rounded-lg bg-brand-green px-6 py-10 md:px-10 md:py-14 lg:px-14"
+        >
+          <div
+            class="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16"
+          >
+            <!-- LEFT -->
+            <div>
+              <span
+                class="inline-block mb-6 rounded-full border border-white px-4 py-1 text-sm font-medium tracking-wide text-white"
+              >
+                OUR PRODUCTS
+              </span>
+
+              <h2
+                class="text-2xl font-bold leading-tight text-white md:text-3xl lg:text-4xl"
+              >
+                Bespoke products<br />
+                for unique needs.
+              </h2>
+            </div>
+
+            <!-- RIGHT -->
+            <div class="md:pt-[48px]">
+              <p class="text-lg leading-relaxed text-white">
+                We offer tailormade products across the lifecycle of green
+                projects, focusing mainly on segments such as renewable energy,
+                e-mobility and green molecules.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BLUE PRODUCTS SECTION -->
+      <div class="bg-brand-blue pt-56 pb-28">
+        <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-20">
+          <!-- PRODUCTS GRID -->
+          <div
+            class="grid grid-cols-1 gap-y-20 gap-x-16 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            <!-- Item 1 -->
+            <div class="text-center text-white">
+              <img
+                src="/assets/images/icons/project-finance.svg"
+                alt=""
+                class="mx-auto h-28 w-28"
+              />
+              <h4 class="mt-6 text-xl font-medium">Project<br />Finance</h4>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="text-center text-white">
+              <img
+                src="/assets/images/icons/structured-finance.svg"
+                alt=""
+                class="mx-auto h-28 w-28"
+              />
+              <h4 class="mt-6 text-xl font-medium">Structured<br />Finance</h4>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="text-center text-white">
+              <img
+                src="/assets/images/icons/bridge-finance.svg"
+                alt=""
+                class="mx-auto h-28 w-28"
+              />
+              <h4 class="mt-6 text-xl font-medium">Bridge<br />Finance</h4>
+            </div>
+
+            <!-- CENTERED ROW WRAPPER -->
+            <div class="lg:col-span-3 flex justify-center gap-64">
+              <!-- Item 4 -->
+              <div class="text-center text-white">
+                <img
+                  src="/assets/images/icons/working-capital-finance.svg"
+                  alt=""
+                  class="mx-auto h-28 w-28"
+                />
+                <h4 class="mt-6 text-xl font-medium">
+                  Working Capital<br />Finance
+                </h4>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="text-center text-white">
+                <img
+                  src="/assets/images/icons/mezzanine-finance.svg"
+                  alt=""
+                  class="mx-auto h-28 w-28"
+                />
+                <h4 class="mt-6 text-xl font-medium">Mezzanine<br />Finance</h4>
+              </div>
+            </div>
+          </div>
+
+          <!-- FOOTER TEXT -->
+          <div class="pt-16 text-center text-lg leading-relaxed text-white">
+            We continue to expand our product offerings in keeping with client
+            requirements, while ensuring that they’re regulation-compliant at
+            all times.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative w-full overflow-hidden">
+      <!-- Background Image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center"
+        style="background-image: url('/assets/images/handshake-bg.png')"
+      ></div>
+
+      <!-- Content -->
+      <div class="relative z-10">
+        <div class="mx-auto max-w-6xl px-6 py-24 md:px-12 md:py-32 lg:px-20">
+          <div class="max-w-2xl">
+            <h2
+              class="text-3xl font-bold leading-tight text-brand-blue md:text-4xl lg:text-5xl"
+            >
+              Fueling transformation<br />
+              across states and sectors.
+            </h2>
+
+            <p
+              class="mt-6 text-base leading-relaxed text-text-secondary md:text-lg"
+            >
+              We partner with a range of businesses in the climate sector across
+              India, helping them scale up and bring their green vision to life.
+              Through custom-made financial products in several states, we aim
+              to address local and geography-driven needs of projects and
+              business for climate financing.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full bg-white py-20 md:py-28">
+      <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-20">
+        <!-- Section Label -->
+        <div class="text-center">
+          <span
+            class="inline-block rounded-full border border-brand-green px-6 py-2 text-sm font-medium tracking-wide text-text-secondary"
+          >
+            CONTACT US
+          </span>
+        </div>
+
+        <!-- Form -->
+        <form class="mt-16">
+          <!-- Top Fields -->
+          <div class="grid grid-cols-1 gap-x-16 gap-y-12 md:grid-cols-2">
+            <!-- Name -->
+            <div class="flex items-center">
+              <label class="w-16 text-sm font-semibold text-text-secondary"
+                >Name:</label
+              >
+              <input
+                type="text"
+                class="flex-1 border-b border-black-muted bg-transparent pb-1 text-sm outline-none focus:border-brand-green"
+              />
+            </div>
+
+            <!-- Company Name -->
+            <div class="flex items-center">
+              <label class="w-32 text-sm font-semibold text-text-secondary">
+                Company Name:
+              </label>
+              <input
+                type="text"
+                class="flex-1 border-b border-black-muted bg-transparent pb-1 text-sm outline-none focus:border-brand-green"
+              />
+            </div>
+
+            <!-- Phone -->
+            <div class="flex items-center">
+              <label class="w-16 text-sm font-semibold text-text-secondary"
+                >Phone:</label
+              >
+              <input
+                type="tel"
+                class="flex-1 border-b border-black-muted bg-transparent pb-1 text-sm outline-none focus:border-brand-green"
+              />
+            </div>
+
+            <!-- Email -->
+            <div class="flex items-center">
+              <label class="w-14 text-sm font-semibold text-text-secondary"
+                >Email:</label
+              >
+              <input
+                type="email"
+                class="flex-1 border-b border-black-muted bg-transparent pb-1 text-sm outline-none focus:border-brand-green"
+              />
+            </div>
+          </div>
+
+          <!-- Message -->
+          <div class="mt-16">
+            <textarea
+              rows="6"
+              class="w-full rounded-xl border border-black-muted p-6 text-sm outline-none focus:border-brand-green"
+            ></textarea>
+          </div>
+
+          <!-- Submit -->
+          <div class="mt-10 flex justify-end">
+            <button
+              type="submit"
+              class="rounded-full bg-brand-green px-8 py-3 text-sm font-semibold text-white hover:bg-brand-greenLight transition"
+            >
+              SUBMIT
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <footer class="w-full bg-[#5f5756] text-white">
+      <div class="mx-auto max-w-6xl px-6 py-16 md:px-12 lg:px-20">
+        <div
+          class="flex flex-col gap-12 md:flex-row md:items-start md:justify-between"
+        >
+          <!-- LEFT: LOGO + COPYRIGHT -->
+          <div class="flex flex-col gap-6 md:w-1/3">
+            <img
+              src="/assets/images/logo-white.svg"
+              alt="Verdafin"
+              class="w-36"
+            />
+
+            <p class="text-xs text-white/70">
+              Copyright © 2026 Verdafin. All Rights Reserved.
+            </p>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="hidden h-32 w-px bg-white/30 md:block"></div>
+
+          <!-- CENTER: ADDRESS -->
+          <div class="text-sm leading-relaxed md:w-1/3 md:pt-2">
+            <p class="font-semibold">Climate Finance India Pvt. Ltd.</p>
+            <p class="mt-2">
+              1001, Peninsula Business Park<br />
+              Senapati Bapat Marg, Lower Parel,<br />
+              Mumbai 400013, India
+            </p>
+            <p class="mt-4">T: +91 22 438 22 564</p>
+          </div>
+
+          <!-- DIVIDER -->
+          <div class="hidden h-32 w-px bg-white/30 md:block"></div>
+
+          <!-- RIGHT: LINKS -->
+          <div class="flex flex-col gap-3 text-sm md:w-1/6 md:pt-2">
+            <a href="#" class="hover:underline"> ABOUT US </a>
+            <a href="#" class="hover:underline"> OUR PRODUCTS </a>
+            <a href="#" class="hover:underline"> CONTACT US </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleButtons = document.querySelectorAll(
+      'button[data-toggle="bio"]'
+    );
+
+    toggleButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const card = button.closest(".text-center");
+        const bio = card.querySelector("p");
+        const arrow = button.querySelector("img");
+
+        if (!bio) return;
+
+        bio.classList.toggle("line-clamp-4");
+        arrow.classList.toggle("rotate-180");
+
+        button.querySelector("span").textContent = bio.classList.contains(
+          "line-clamp-4"
+        )
+          ? "Read more"
+          : "Read less";
+      });
+    });
+  });
+</script>
