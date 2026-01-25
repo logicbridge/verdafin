@@ -16,42 +16,53 @@
     <title>Verdafin</title>
   </head>
 
-  <body class="font-sans antialiased bg-offwhite text-text-primary">
+  <body
+    class="font-sans antialiased bg-offwhite text-text-primary scroll-smooth"
+  >
     <!-- HEADER -->
-    <header class="w-full bg-white">
+    <header class="sticky top-0 z-50 w-full bg-white">
       <div
         class="mx-auto flex max-w-6xl items-baseline justify-between px-6 py-[20px] md:px-12 lg:px-20"
       >
         <!-- Logo -->
         <div class="flex items-baseline text-text-secondary">
-          <img
-            src="/assets/images/logo.svg"
-            alt="Verdafin"
-            class="h-[80px] w-[126px] object-contain"
-          />
+          <a href="#home">
+            <img
+              src="/assets/images/logo.svg"
+              alt="Verdafin"
+              class="h-[80px] w-[126px] object-contain"
+            />
+          </a>
         </div>
 
         <!-- Navigation -->
         <nav
           class="hidden items-baseline gap-6 text-sm font-medium text-text-secondary md:flex"
         >
-          <a href="#" class="hover:text-text-primary transition">About Us</a>
+          <a href="#about" class="hover:text-text-primary transition"
+            >About Us</a
+          >
           <span class="text-text-muted">|</span>
-          <a href="#" class="hover:text-text-primary transition">
+
+          <a href="#leadership" class="hover:text-text-primary transition">
             Our Leadership
           </a>
           <span class="text-text-muted">|</span>
-          <a href="#" class="hover:text-text-primary transition">
+
+          <a href="#products" class="hover:text-text-primary transition">
             Our Products
           </a>
           <span class="text-text-muted">|</span>
-          <a href="#" class="hover:text-text-primary transition">Contact</a>
+
+          <a href="#contact" class="hover:text-text-primary transition"
+            >Contact</a
+          >
         </nav>
       </div>
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative isolate w-full min-h-[calc(100vh-5rem)]">
+    <section id="home" class="relative isolate w-full min-h-[calc(100vh-5rem)]">
       <!-- Background video -->
       <video
         class="absolute inset-0 h-full w-full object-cover"
@@ -72,15 +83,16 @@
             class="mb-20 text-4xl font-bold text-white md:text-5xl lg:text-6xl"
             style="text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35)"
           >
-            <span class="block leading-[1]">Green ideas deserve</span>
-            <span class="block mt-4 leading-[1]">a green light</span>
+            <span class="block leading-[1]"
+              >Green ideas deserve a green light</span
+            >
           </h1>
         </div>
       </div>
     </section>
 
     <!-- FLOATING GREEN CARD -->
-    <div class="absolute inset-x-0 -bottom-36 z-30">
+    <div id="about" class="scroll-mt-28 absolute inset-x-0 -bottom-36 z-30">
       <div
         class="mx-auto max-w-5xl bg-brand-green px-6 py-10 md:px-10 md:py-18 lg:px-24"
       >
@@ -92,7 +104,7 @@
       </div>
     </div>
 
-    <section class="w-full bg-white pt-36 pb-20 md:pt-40 md:pb-28">
+    <section class="w-full bg-white pt-32 pb-20 md:pt-40 md:pb-28">
       <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-20">
         <!-- Section label -->
         <span
@@ -213,305 +225,425 @@
       </div>
     </section>
 
-    <section class="w-full bg-white py-20 md:py-28 mb-36">
+    <section id="leadership" class="w-full bg-white py-4 md:py-12 mb-36">
       <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-20">
-        <!-- Heading -->
+        <!-- Header -->
         <div class="text-center">
-          <!-- Section label -->
           <span
-            class="inline-block mb-12 rounded-full border border-brand-green px-5 py-2 text-xs font-medium tracking-wide text-text-secondary"
+            class="inline-block rounded-full border border-brand-green px-5 py-2 text-xs font-medium tracking-wide text-brand-green"
           >
             OUR LEADERSHIP
           </span>
+
           <h2
-            class="text-3xl font-bold text-brand-blue md:text-4xl lg:text-5xl"
+            class="mt-6 text-3xl font-bold text-brand-blue md:text-4xl lg:text-5xl"
           >
             Led with vision and purpose
           </h2>
 
           <p
-            class="mx-auto mt-6 max-w-3xl text-base leading-relaxed text-text-secondary"
+            class="mx-auto mt-6 max-w-6xl text-base leading-relaxed text-text-secondary"
           >
             At the heart of Verdafin is a leadership team that possesses the
             experience, expertise and vision to power the unique needs of green
             companies and make India resilient and future-ready.
           </p>
-
-          <h3 class="mt-12 text-lg font-bold text-brand-green md:text-xl">
-            Board of Directors
-          </h3>
         </div>
 
-        <!-- Directors Grid 1 -->
-        <div
-          class="mt-16 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <!-- Card 1 -->
-          <div class="text-center">
-            <div
-              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
-            >
+        <!-- Tabs -->
+        <div class="mt-12 flex items-center justify-center gap-6 font-semibold">
+          <button
+            id="tab-management"
+            class="text-lg text-text-muted"
+            onclick="showTab('management')"
+          >
+            Management Team
+          </button>
+
+          <span class="text-text-muted">|</span>
+
+          <button
+            id="tab-board"
+            class="text-lg text-text-muted"
+            onclick="showTab('board')"
+          >
+            Board of Directors
+          </button>
+        </div>
+
+        <!-- MANAGEMENT TEAM -->
+        <div id="management" class="mt-16 space-y-16">
+          <!-- Person -->
+          <div class="flex gap-10">
+            <!-- Avatar -->
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
+              <img
+                src="/assets/images/directors/noface.png"
+                alt="Name of the Person"
+                class="h-full w-full object-cover grayscale"
+              />
+            </div>
+
+            <!-- Content -->
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Name of the Person
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  CEO
+                </span>
+              </h4>
+
+              <p
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+                id="bio-1"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                facilisi. Praesent tincidunt nibh et nibh gravida, et pulvinar
+                justo laoreet. Pellentesque laoreet felis, a aliquet enim
+                dignissim et. Aliquam euismod elementum lobortis facilisi.
+                Praesent tincidunt nibh gravida, et pulvinar justo laoreet.
+              </p>
+
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-1', this)"
+              >
+                Read more >>
+              </button>
+            </div>
+          </div>
+
+          <!-- Person -->
+          <div class="flex gap-10">
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
+              <img
+                src="/assets/images/directors/noface.png"
+                alt="Name of the Person"
+                class="h-full w-full object-cover grayscale"
+              />
+            </div>
+
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Name of the Person
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  Deputy CEO
+                </span>
+              </h4>
+
+              <p
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+                id="bio-2"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                facilisi. Praesent tincidunt nibh et nibh gravida, et pulvinar
+                justo laoreet. Pellentesque laoreet felis, a aliquet enim
+                dignissim et. Aliquam euismod elementum lobortis facilisi.
+              </p>
+
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-2', this)"
+              >
+                Read more >>
+              </button>
+            </div>
+          </div>
+
+          <div class="flex gap-10">
+            <!-- Avatar -->
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
+              <img
+                src="/assets/images/directors/behzad-bhesania.png"
+                alt="Mr. Behzad Bhesania"
+                class="h-full w-full object-cover grayscale"
+              />
+            </div>
+
+            <!-- Content -->
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Mr. Behzad Bhesania
+                <span class="ml-2 text-sm font-normal text-text-secondary"
+                  >CFO</span
+                >
+              </h4>
+
+              <!-- Bio -->
+              <p
+                id="bio-behzad"
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+              >
+                Mr. Behzad has professional experience in the banking sector in
+                various roles, where he established, expanded and managed
+                business across developed and emerging markets in Asia. He is
+                currently a Senior Advisor to TPG, contributing to multiple
+                portfolio companies across India and Southeast Asia, including
+                Five Star, Grihum, SK Finance, Kakao Bank, and Union Bank of
+                Colombo. Before joining TPG, he was the Chief Executive Officer
+                (CEO) at Citibank Hong Kong and held multiple senior leadership
+                roles during his 20-year tenure there. He also served as the
+                Managing Director and Regional Head of Asia for Private and
+                Business Clients at Deutsche Bank. Additionally, he was the CEO
+                of Maritime Bank in Vietnam, where he led significant business
+                growth. He currently serves on the Board of Directors of YES
+                Bank, chairing the Credit Committee and playing a key role in
+                its restructuring. He holds a Master of Business Administration
+                from Rice University and a Bachelor of Technology degree from
+                IIT Bombay.
+              </p>
+
+              <!-- Toggle -->
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-behzad', this)"
+              >
+                Read more >>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOARD OF DIRECTORS -->
+        <div id="board" class="mt-16 hidden space-y-16">
+          <div class="flex gap-10">
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
                 src="/assets/images/directors/om-prakash-bhatt.png"
                 alt="Mr. Om Prakash Bhatt"
               />
             </div>
 
-            <h4 class="mt-6 text-lg font-semibold text-brand-green">
-              Mr. Om Prakash Bhatt
-            </h4>
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Mr. Om Prakash Bhatt
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  Chairman
+                </span>
+              </h4>
 
-            <p
-              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
-            >
-              Mr. Bhatt has professional experience of over 40 years in the
-              banking sector. He was the Chairman of the State Bank of India
-              (SBI), the country's largest public sector bank, and during his
-              leadership from 2006 to 2011, he played a key role in transforming
-              the bank, overseeing a remarkable five-fold growth in loans and
-              deposits within just five years. In addition to his role at SBI,
-              he also served as Chairman of the Indian Banks Association (IBA),
-              where he played a significant role in economic diplomacy. He has
-              been on the Global Board of Standard Chartered Bank and various
-              Tata Group companies. Currently, he is on the Board of Coforge,
-              SBI Global Factors Limited, Aadhar Housing Finance and Tata
-              Motors. He was honoured with the 'Banker of the Year' award by
-              Business Standard and the 'CNN-IBN Indian of the Year' award in
-              2007. Mr. Bhatt holds a Bachelor's Degree in Science from DAV
-              College, Dehradun and a Master's Degree in English Literature.
-            </p>
-            <button
-              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
-              data-toggle="bio"
-            >
-              <span>Read more</span>
-              <img
-                src="/assets/images/arrow-down-g.svg"
-                class="h-8 w-8 transition-transform duration-200"
-                alt=""
-              />
-            </button>
+              <p
+                id="bio-bhatt"
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+              >
+                Mr. Bhatt has over 40 years of professional experience in the
+                banking sector. He served as the Chairman of the State Bank of
+                India (SBI), the country’s largest public sector bank, from 2006
+                to 2011, during which he led a major transformation and oversaw
+                a five-fold growth in loans and deposits within five years. He
+                also served as Chairman of the Indian Banks Association (IBA),
+                playing a significant role in economic diplomacy. In addition,
+                he has served on the Global Board of Standard Chartered Bank and
+                on the boards of several Tata Group companies. He is currently
+                on the Board of Coforge, SBI Global Factors Limited, Aadhar
+                Housing Finance and Tata Motors. He was honoured with the
+                ‘Banker of the Year’ award by Business Standard and the ‘CNN-IBN
+                Indian of the Year’ award in 2007. Mr. Bhatt holds a Bachelor’s
+                Degree in Science from DAV College, Dehradun, and a Master’s
+                Degree in English Literature.
+              </p>
+
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-bhatt', this)"
+              >
+                Read more >>
+              </button>
+            </div>
           </div>
 
-          <!-- Card 2 -->
-          <div class="text-center">
-            <div
-              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
-            >
+          <div class="flex gap-10">
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
                 src="/assets/images/directors/farokh-subedar.png"
                 alt="Mr. Farokh Subedar"
               />
             </div>
 
-            <h4 class="mt-6 text-lg font-semibold text-brand-green">
-              Mr. Farokh Subedar
-            </h4>
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Mr. Farokh Subedar
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  Independent Director
+                </span>
+              </h4>
 
-            <p
-              id="bio-subedar"
-              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
-            >
-              Mr. Subedar has over 40 years of experience in business
-              management, finance, taxation, law, and accounting. He is
-              currently serving as the Chairman and Independent Director of DCB
-              Bank. Prior to his current role, he served as the Chief Operating
-              Officer of Tata Sons Limited, after having held the positions of
-              Chief Financial Officer and Company Secretary there. He has been
-              on the board of directors of several Tata Group companies and has
-              been closely associated with various Tata Non-Banking Financial
-              Companies throughout his career. His extensive association with
-              the Tata Group spans over 38 years, contributing to the growth and
-              success of the conglomerate. Mr. Subedar also served as the
-              President of the Bombay Chamber of Commerce and Industry and has
-              been actively involved with NGOs across diverse sectors,
-              channeling showcasing his commitment to social causes. He holds a
-              Bachelor's Degree in Commerce and is a Member of the Institute of
-              Chartered Accountants of India and the Institute of Company
-              Secretaries of India.
-            </p>
+              <p
+                id="bio-subedar"
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+              >
+                Mr. Subedar has over 40 years of experience in business
+                management, finance, taxation, law and accounting. He is
+                currently serving as the Chairman and Independent Director of
+                DCB Bank. Prior to this, he was the Chief Operating Officer of
+                Tata Sons Limited, having earlier held the positions of Chief
+                Financial Officer and Company Secretary. His association with
+                the Tata Group spans over 38 years, during which he worked
+                closely with several Tata Group companies and Tata Non-Banking
+                Financial Companies, contributing significantly to the group’s
+                growth and governance. He has also served as President of the
+                Bombay Chamber of Commerce and Industry and has been actively
+                involved with NGOs across diverse sectors, reflecting his
+                commitment to social causes. Mr. Subedar holds a Bachelor’s
+                Degree in Commerce and is a Member of the Institute of Chartered
+                Accountants of India and the Institute of Company Secretaries of
+                India.
+              </p>
 
-            <button
-              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
-              data-toggle="bio"
-            >
-              <span>Read more</span>
-              <img
-                src="/assets/images/arrow-down-g.svg"
-                class="h-8 w-8 transition-transform duration-200"
-                alt=""
-              />
-            </button>
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-subedar', this)"
+              >
+                Read more >>
+              </button>
+            </div>
           </div>
 
-          <!-- Card 3 -->
-          <div class="text-center">
-            <div
-              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
-            >
+          <div class="flex gap-10">
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
                 src="/assets/images/directors/atul-malik.png"
                 alt="Mr. Atul Malik"
               />
             </div>
 
-            <h4 class="mt-6 text-lg font-semibold text-brand-green">
-              Mr. Atul Malik
-            </h4>
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Mr. Atul Malik
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  Director
+                </span>
+              </h4>
 
-            <p
-              id="bio-atul"
-              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
-            >
-              Mr. Malik has professional experience in the banking sector in
-              various roles, where he established, expanded and managed business
-              across developed and emerging markets in Asia. He is currently a
-              Senior Advisor to TPG, contributing to multiple portfolio
-              companies across India and Southeast Asia, including Five Star,
-              Grihum, SK Finance, Kakao Bank, and Union Bank of Colombo. Before
-              joining TPG, Mr. Malik was the Chief Executive Officer (CEO) at
-              Citibank Hong Kong, and prior to taking up this role, he held
-              multiple senior positions during his 20-year tenure there. He also
-              served as the Managing Director and Regional Head of Asia for
-              Private and Business Clients at Deutsche Bank. Additionally, he
-              was the CEO of Maritime Bank, one of the largest private banks in
-              Vietnam, where he led significant business growth. Currently, he
-              is on the Board of Directors of YES Bank, where he chairs the
-              Credit Committee. He has been instrumental in the restructuring
-              for bailing out the Bank. He holds a degree of Master of Business
-              dministration from Rice University in the United States and a
-              Bachelor of Technology Degree from Indian Institute of Technology
-              (IIT) Bombay in India.
-            </p>
+              <p
+                id="bio-atul"
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+              >
+                Mr. Malik has extensive professional experience in the banking
+                sector, having established, expanded and managed businesses
+                across developed and emerging markets in Asia. He is currently a
+                Senior Advisor to TPG, contributing to multiple portfolio
+                companies across India and Southeast Asia. Prior to this, he was
+                the Chief Executive Officer (CEO) of Citibank Hong Kong and held
+                multiple senior leadership positions during his 20-year tenure
+                at Citibank. He also served as the Managing Director and
+                Regional Head of Asia for Private and Business Clients at
+                Deutsche Bank. Additionally, he was the CEO of Maritime Bank in
+                Vietnam, where he led significant business growth. He currently
+                serves on the Board of Directors of YES Bank, where he chairs
+                the Credit Committee and has played a key role in the bank’s
+                restructuring. Mr. Malik holds a Master of Business
+                Administration degree from Rice University in the United States
+                and a Bachelor of Technology degree from the Indian Institute of
+                Technology (IIT) Bombay.
+              </p>
 
-            <button
-              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
-              data-toggle="bio"
-            >
-              <span>Read more</span>
-              <img
-                src="/assets/images/arrow-down-g.svg"
-                class="h-8 w-8 transition-transform duration-200"
-                alt=""
-              />
-            </button>
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-atul', this)"
+              >
+                Read more >>
+              </button>
+            </div>
           </div>
-        </div>
 
-        <!-- Directors Grid 2 -->
-        <div
-          class="mt-16 grid grid-cols-1 gap-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          <!-- Card 4 -->
-          <div class="text-center">
-            <div
-              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
-            >
+          <div class="flex gap-10">
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
                 src="/assets/images/directors/ankur-thadani.png"
                 alt="Mr. Ankur Thadani"
               />
             </div>
 
-            <h4 class="mt-6 text-lg font-semibold text-brand-green">
-              Mr. Ankur Thadani
-            </h4>
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Mr. Ankur Thadani
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  Director
+                </span>
+              </h4>
 
-            <p
-              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
-            >
-              Mr. Thadani is a Partner and India Head of TPG Growth, RISE and
-              RISE Climate. He has led investments in the healthcare, energy
-              transition, and consumer sectors in India and the South Asia
-              region. Prior to joining TPG in 2013, he worked with an Indian
-              private equity fund, India Equity Partners, focusing on
-              investments in the consumer and healthcare sectors. He serves on
-              the Board of Directors of TATA Passengers Electric Mobility Ltd.,
-              Dr. Agarwal's Health Care Ltd., Learning with N Private Ltd., Rhea
-              Healthcare Private Ltd., Nova Medical Centers Private Ltd. and API
-              Holdings. Mr. Thadani has been recognized by the Economic Times as
-              one of the 40 under 40 Business Leaders in India and is a member
-              of the Indian Venture and Alternate Capital Association's Climate
-              Council. He holds a Master of Business Administration Degree from
-              Indian Institute of Foreign Trade, where he was awarded a Gold
-              Medal for all-round achievement.
-            </p>
+              <p
+                id="bio-ankur"
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+              >
+                Mr. Thadani is a Partner and India Head of TPG Growth, RISE and
+                RISE Climate. He has led investments across the healthcare,
+                energy transition and consumer sectors in India and the South
+                Asia region. Prior to joining TPG in 2013, he worked with India
+                Equity Partners, an Indian private equity fund, where he focused
+                on investments in the consumer and healthcare sectors. He
+                currently serves on the Boards of Directors of TATA Passengers
+                Electric Mobility Ltd., Dr. Agarwal’s Health Care Ltd., Learning
+                with N Private Ltd., Rhea Healthcare Private Ltd., Nova Medical
+                Centers Private Ltd. and API Holdings. He has been recognised by
+                The Economic Times as one of India’s 40 under 40 Business
+                Leaders and is a member of the Indian Venture and Alternate
+                Capital Association’s Climate Council. Mr. Thadani holds a
+                Master of Business Administration degree from the Indian
+                Institute of Foreign Trade, where he was awarded a Gold Medal
+                for all-round achievement.
+              </p>
 
-            <button
-              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
-              data-toggle="bio"
-            >
-              <span>Read more</span>
-              <img
-                src="/assets/images/arrow-down-g.svg"
-                class="h-8 w-8 transition-transform duration-200"
-                alt=""
-              />
-            </button>
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-ankur', this)"
+              >
+                Read more >>
+              </button>
+            </div>
           </div>
 
-          <!-- Card 5 -->
-          <div class="text-center">
-            <div
-              class="mx-auto flex h-50 w-50 items-center justify-center rounded-full bg-brand-green"
-            >
+          <div class="flex gap-10">
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
-                src="/assets/images/directors/behzad-bhesania.png"
-                alt="Mr. Behzad Bhesania"
+                src="/assets/images/directors/sanjeev-mehra.png"
+                alt="Mr. Sanjeev Mehra"
               />
             </div>
 
-            <h4 class="mt-6 text-lg font-semibold text-brand-green">
-              Mr. Behzad Bhesania
-            </h4>
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Mr. Sanjeev Mehra
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  Managing Director
+                </span>
+              </h4>
 
-            <p
-              id="bio-behzad"
-              class="mt-4 text-sm leading-relaxed text-text-secondary line-clamp-4 text-left"
-            >
-              Mr. Behazad has professional experience in the banking sector in
-              various roles, where he established, expanded and managed business
-              across developed and emerging markets in Asia. He is currently a
-              Senior Advisor to TPG, contributing to multiple portfolio
-              \companies across India and Southeast Asia, including Five Star,
-              Grihum, SK Finance, Kakao Bank, and Union Bank of Colombo. Before
-              joining TPG, Mr. Malik was the Chief Executive Officer (CEO) at
-              Citibank Hong Kong, and prior to taking up this role, he held
-              multiple senior positions during his 20-year tenure there. He also
-              served as the Managing Director and Regional Head of Asia for
-              Private and Business Clients at Deutsche Bank. Additionally, he
-              was the CEO of Maritime Bank, one of the largest private banks in
-              Vietnam, where he led significant business growth. Currently, he
-              is on the Board of Directors of YES Bank, where he chairs the
-              Credit Committee. He has been instrumental in the restructuring
-              for bailing out the Bank. He holds a degree of Master of Business
-              dministration from Rice University in the United States and a
-              Bachelor of Technology Degree from Indian Institute of Technology
-              (IIT) Bombay in India.
-            </p>
+              <p
+                id="bio-sanjeev"
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+              >
+                Mr. Mehra is a Managing Director of TPG Capital Asia, based in
+                Mumbai. He focuses on investments in the Financial Services and
+                Consumer sectors and has been involved in several TPG portfolio
+                companies, including Five Star Business Finance, Grihum Housing
+                Finance, Shriram Capital, Shriram General Insurance and Shriram
+                Life Insurance. Prior to joining TPG in 2018, he worked with
+                WestBridge Capital. Mr. Mehra holds a Master of Business
+                Administration degree from London Business School and an
+                undergraduate degree in Economics from the University of Delhi.
+              </p>
 
-            <button
-              class="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-brand-green"
-              data-toggle="bio"
-            >
-              <span>Read more</span>
-              <img
-                src="/assets/images/arrow-down-g.svg"
-                class="h-8 w-8 transition-transform duration-200"
-                alt=""
-              />
-            </button>
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-sanjeev', this)"
+              >
+                Read more >>
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <div id="products" class="scroll-mt-[14rem] relative w-full">&nbsp;</div>
     <!-- PRODUCTS WRAPPER -->
     <section class="relative w-full">
       <!-- FLOATING GREEN CARD -->
       <div class="absolute inset-x-0 -top-32 z-10">
         <div
-          class="mx-auto max-w-5xl rounded-lg bg-brand-green px-6 py-10 md:px-10 md:py-14 lg:px-14"
+          class="mx-auto max-w-5xl bg-brand-green px-6 py-10 md:px-10 md:py-14 lg:px-14"
         >
           <div
             class="grid grid-cols-1 items-start gap-10 md:grid-cols-2 md:gap-16"
@@ -549,61 +681,55 @@
         <div class="mx-auto max-w-6xl px-6 md:px-12 lg:px-20">
           <!-- PRODUCTS GRID -->
           <div
-            class="grid grid-cols-1 gap-y-20 gap-x-16 sm:grid-cols-2 lg:grid-cols-3"
+            class="grid grid-cols-1 gap-y-20 gap-x-12 sm:grid-cols-2 lg:grid-cols-6"
           >
-            <!-- Item 1 -->
-            <div class="text-center text-white">
+            <!-- Row 1 -->
+            <div class="lg:col-span-2 text-center text-white">
               <img
                 src="/assets/images/icons/project-finance.svg"
-                alt=""
                 class="mx-auto h-28 w-28"
+                alt=""
               />
               <h4 class="mt-6 text-xl font-medium">Project<br />Finance</h4>
             </div>
 
-            <!-- Item 2 -->
-            <div class="text-center text-white">
+            <div class="lg:col-span-2 text-center text-white">
               <img
                 src="/assets/images/icons/structured-finance.svg"
-                alt=""
                 class="mx-auto h-28 w-28"
+                alt=""
               />
               <h4 class="mt-6 text-xl font-medium">Structured<br />Finance</h4>
             </div>
 
-            <!-- Item 3 -->
-            <div class="text-center text-white">
+            <div class="lg:col-span-2 text-center text-white">
               <img
                 src="/assets/images/icons/bridge-finance.svg"
-                alt=""
                 class="mx-auto h-28 w-28"
+                alt=""
               />
               <h4 class="mt-6 text-xl font-medium">Bridge<br />Finance</h4>
             </div>
 
-            <!-- CENTERED ROW WRAPPER -->
-            <div class="lg:col-span-3 flex justify-center gap-64">
-              <!-- Item 4 -->
-              <div class="text-center text-white">
-                <img
-                  src="/assets/images/icons/working-capital-finance.svg"
-                  alt=""
-                  class="mx-auto h-28 w-28"
-                />
-                <h4 class="mt-6 text-xl font-medium">
-                  Working Capital<br />Finance
-                </h4>
-              </div>
+            <!-- Row 2 (centered pair on desktop) -->
+            <div class="lg:col-start-2 lg:col-span-2 text-center text-white">
+              <img
+                src="/assets/images/icons/working-capital-finance.svg"
+                class="mx-auto h-28 w-28"
+                alt=""
+              />
+              <h4 class="mt-6 text-xl font-medium">
+                Working Capital<br />Finance
+              </h4>
+            </div>
 
-              <!-- Item 5 -->
-              <div class="text-center text-white">
-                <img
-                  src="/assets/images/icons/mezzanine-finance.svg"
-                  alt=""
-                  class="mx-auto h-28 w-28"
-                />
-                <h4 class="mt-6 text-xl font-medium">Mezzanine<br />Finance</h4>
-              </div>
+            <div class="lg:col-span-2 text-center text-white">
+              <img
+                src="/assets/images/icons/mezzanine-finance.svg"
+                class="mx-auto h-28 w-28"
+                alt=""
+              />
+              <h4 class="mt-6 text-xl font-medium">Mezzanine<br />Finance</h4>
             </div>
           </div>
 
@@ -617,7 +743,7 @@
       </div>
     </section>
 
-    <section class="relative w-full overflow-hidden">
+    <section id="contact" class="relative w-full overflow-hidden">
       <!-- Background Image -->
       <div
         class="absolute inset-0 bg-cover bg-center"
@@ -650,167 +776,180 @@
     </section>
 
     <section class="relative w-full bg-white pt-56">
-  <!-- OVERLAPPING CONTACT CARD -->
-  <div class="absolute inset-x-0 -top-32 flex justify-center">
-    <div
-      class="w-[92%] max-w-3xl rounded-lg bg-brand-blue px-8 py-10 text-white md:px-12 md:py-12"
-    >
-      <!-- Heading -->
-      <h2 class="text-center text-2xl font-semibold md:text-3xl">
-        Get in Touch
-      </h2>
-      <p class="mt-2 text-center text-sm text-white/90 md:text-base">
-        Please fill in your details below to get in touch with us.
-      </p>
+      <!-- OVERLAPPING CONTACT CARD -->
+      <div class="absolute inset-x-0 -top-32 flex justify-center">
+        <div
+          class="w-[92%] max-w-3xl rounded-lg bg-brand-blue px-8 py-10 text-white md:px-12 md:py-12"
+        >
+          <!-- Heading -->
+          <h2 class="text-center text-2xl font-semibold md:text-3xl">
+            Get in Touch
+          </h2>
+          <p class="mt-2 text-center text-sm text-white/90 md:text-base">
+            Please fill in your details below to get in touch with us.
+          </p>
 
-      <!-- Form -->
-      <form class="mt-10 space-y-6">
-        <!-- Name -->
-        <div>
-          <label class="block text-sm">Name*</label>
-          <input
-            type="text"
-            class="mt-1 w-full border-b border-white bg-transparent pb-1 text-sm focus:outline-none"
-          />
+          <!-- Form -->
+          <form class="mt-10 space-y-6">
+            <!-- Name -->
+            <div>
+              <label class="block text-sm">Name*</label>
+              <input
+                type="text"
+                class="mt-1 w-full border-b border-white bg-transparent pb-1 text-sm focus:outline-none"
+              />
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label class="block text-sm">E-mail*</label>
+              <input
+                type="email"
+                class="mt-1 w-full border-b border-white bg-transparent pb-1 text-sm focus:outline-none"
+              />
+            </div>
+
+            <!-- Company -->
+            <div>
+              <label class="block text-sm">Company*</label>
+              <input
+                type="text"
+                class="mt-1 w-full border-b border-white bg-transparent pb-1 text-sm focus:outline-none"
+              />
+            </div>
+
+            <!-- Message -->
+            <div>
+              <label class="block text-sm">Message*</label>
+              <textarea
+                rows="4"
+                class="mt-2 w-full rounded-md border border-white bg-transparent p-3 text-sm focus:outline-none"
+              ></textarea>
+            </div>
+
+            <!-- Submit -->
+            <div class="flex justify-center pt-4">
+              <button
+                type="submit"
+                class="rounded-full bg-brand-green px-8 py-2 text-sm font-semibold text-white hover:bg-brand-greenLight transition"
+              >
+                Send
+              </button>
+            </div>
+          </form>
         </div>
-
-        <!-- Email -->
-        <div>
-          <label class="block text-sm">E-mail*</label>
-          <input
-            type="email"
-            class="mt-1 w-full border-b border-white bg-transparent pb-1 text-sm focus:outline-none"
-          />
-        </div>
-
-        <!-- Company -->
-        <div>
-          <label class="block text-sm">Company*</label>
-          <input
-            type="text"
-            class="mt-1 w-full border-b border-white bg-transparent pb-1 text-sm focus:outline-none"
-          />
-        </div>
-
-        <!-- Message -->
-        <div>
-          <label class="block text-sm">Message*</label>
-          <textarea
-            rows="4"
-            class="mt-2 w-full rounded-md border border-white bg-transparent p-3 text-sm focus:outline-none"
-          ></textarea>
-        </div>
-
-        <!-- Submit -->
-        <div class="flex justify-center pt-4">
-          <button
-            type="submit"
-            class="rounded-full bg-brand-green px-8 py-2 text-sm font-semibold text-white hover:bg-brand-greenLight transition"
-          >
-            Send
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <!-- BOTTOM INFO SECTION -->
-  <div class="mx-auto max-w-6xl px-6 pb-20 pt-56 md:px-12 lg:px-20">
-    <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
-      <!-- Grievances -->
-      <div>
-        <h3 class="text-lg font-semibold text-brand-blue">
-          Grievances
-        </h3>
-        <p class="mt-4 text-sm leading-relaxed text-text-secondary">
-          Nothing matters more to us than providing a smooth, positive experience
-          and prompt customer service to you. In case you have any concerns,
-          please reach out to us and we will address them at the earliest.
-        </p>
-
-        <p class="mt-4 text-sm text-text-secondary">
-          Write to us at
-          <a
-            href="mailto:grievance@verdafin.com"
-            class="font-medium text-brand-blue underline"
-          >
-            grievance@verdafin.com
-          </a>
-        </p>
-
-        <p class="mt-2 text-sm text-text-secondary">
-          To know more about raising complaints or grievance addressal,
-          <a href="#" class="font-medium text-brand-blue underline">
-            see here
-          </a>.
-        </p>
       </div>
 
-      <!-- Careers -->
-      <div>
-        <h3 class="text-lg font-semibold text-brand-blue">
-          Careers
-        </h3>
-        <p class="mt-4 text-sm leading-relaxed text-text-secondary">
-          Interested in working with us and helping power a greener future?
-          We’d love to hear from you.
-        </p>
+      <!-- BOTTOM INFO SECTION -->
+      <div
+        class="mx-auto max-w-6xl px-6 pb-20 pt-[300px] md:pt-[340px] lg:pt-[380px] md:px-12 lg:px-20"
+      >
+        <div class="grid grid-cols-1 gap-12 md:grid-cols-2">
+          <!-- Grievances -->
+          <div>
+            <h3 class="text-lg font-semibold text-brand-blue">Grievances</h3>
+            <p class="mt-4 text-sm leading-relaxed text-text-secondary">
+              Nothing matters more to us than providing a smooth, positive
+              experience and prompt customer service to you. In case you have
+              any concerns, please reach out to us and we will address them at
+              the earliest.
+            </p>
 
-        <p class="mt-4 text-sm text-text-secondary">
-          Send us your CV on
-          <a
-            href="mailto:careers@verdafin.com"
-            class="font-medium text-brand-blue underline"
-          >
-            careers@verdafin.com
-          </a>
-        </p>
+            <p class="mt-4 text-sm text-text-secondary">
+              Write to us at
+              <a
+                href="mailto:grievance@verdafin.com"
+                class="font-medium text-brand-blue underline"
+              >
+                grievance@verdafin.com
+              </a>
+            </p>
+
+            <p class="mt-2 text-sm text-text-secondary">
+              To know more about raising complaints or grievance addressal,
+              <a href="#" class="font-medium text-brand-blue underline">
+                see here </a
+              >.
+            </p>
+          </div>
+
+          <!-- Careers -->
+          <div>
+            <h3 class="text-lg font-semibold text-brand-blue">Careers</h3>
+            <p class="mt-4 text-sm leading-relaxed text-text-secondary">
+              Interested in working with us and helping power a greener future?
+              We’d love to hear from you.
+            </p>
+
+            <p class="mt-4 text-sm text-text-secondary">
+              Send us your CV on
+              <a
+                href="mailto:careers@verdafin.com"
+                class="font-medium text-brand-blue underline"
+              >
+                careers@verdafin.com
+              </a>
+            </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <footer class="w-full bg-[#5f5756] text-white">
-      <div class="mx-auto max-w-6xl px-6 py-16 md:px-12 lg:px-20">
-        <div
-          class="flex flex-col gap-12 md:flex-row md:items-start md:justify-between"
-        >
-          <!-- LEFT: LOGO + COPYRIGHT -->
-          <div class="flex flex-col gap-6 md:w-1/3">
+      <div class="mx-auto max-w-6xl px-6 py-20 md:px-12 lg:px-20">
+        <div class="flex flex-col gap-16 md:flex-row md:items-start">
+          <!-- COLUMN 1: LOGO -->
+          <div class="md:w-1/3 flex flex-col items-center">
             <img
               src="/assets/images/logo-white.svg"
               alt="Verdafin"
-              class="w-36"
+              class="w-40"
             />
 
-            <p class="text-xs text-white/70">
+            <p class="mt-10 md:mt-24 text-xs text-white/70 text-center">
               Copyright © 2026 Verdafin. All Rights Reserved.
             </p>
           </div>
 
           <!-- DIVIDER -->
-          <div class="hidden h-32 w-px bg-white/30 md:block"></div>
+          <div class="relative hidden md:block md:w-px h-[15rem]">
+            <div
+              class="absolute top-[5rem] bottom-[1rem] w-px bg-white/30"
+            ></div>
+          </div>
 
-          <!-- CENTER: ADDRESS -->
-          <div class="text-sm leading-relaxed md:w-1/3 md:pt-2">
+          <!-- COLUMN 2: ADDRESS -->
+          <div class="md:w-1/3 pt-10 md:pt-20 text-sm leading-relaxed">
             <p class="font-semibold">Climate Finance India Pvt. Ltd.</p>
+
             <p class="mt-2">
               1001, Peninsula Business Park<br />
               Senapati Bapat Marg, Lower Parel,<br />
               Mumbai 400013, India
             </p>
+
             <p class="mt-4">T: +91 22 438 22 564</p>
           </div>
 
           <!-- DIVIDER -->
-          <div class="hidden h-32 w-px bg-white/30 md:block"></div>
+          <div class="relative hidden md:block md:w-px h-[15rem]">
+            <div
+              class="absolute top-[5rem] bottom-[1rem] w-px bg-white/30"
+            ></div>
+          </div>
 
-          <!-- RIGHT: LINKS -->
-          <div class="flex flex-col gap-3 text-sm md:w-1/6 md:pt-2">
-            <a href="#" class="hover:underline"> ABOUT US </a>
-            <a href="#" class="hover:underline"> OUR PRODUCTS </a>
-            <a href="#" class="hover:underline"> CONTACT US </a>
+          <!-- COLUMN 3: LINKS -->
+          <div class="md:w-1/6 pt-10 md:pt-20 text-sm">
+            <ul class="flex flex-col gap-3">
+              <li><a href="#about" class="hover:underline">ABOUT US</a></li>
+              <li>
+                <a href="#leadership" class="hover:underline">OUR LEADERSHIP</a>
+              </li>
+              <li>
+                <a href="#products" class="hover:underline">OUR PRODUCTS</a>
+              </li>
+              <li><a href="#contact" class="hover:underline">CONTACT US</a></li>
+            </ul>
           </div>
         </div>
       </div>
@@ -821,28 +960,41 @@
 </html>
 
 <script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const toggleButtons = document.querySelectorAll(
-      'button[data-toggle="bio"]'
-    );
+  function toggleBio(id, btn) {
+    const bio = document.getElementById(id);
+    const isClamped = bio.classList.contains("line-clamp-4");
 
-    toggleButtons.forEach((button) => {
-      button.addEventListener("click", () => {
-        const card = button.closest(".text-center");
-        const bio = card.querySelector("p");
-        const arrow = button.querySelector("img");
+    bio.classList.toggle("line-clamp-4");
+    btn.textContent = isClamped ? "Read less <<" : "Read more >>";
+  }
+</script>
 
-        if (!bio) return;
+<script>
+  function showTab(tab) {
+    // hide both sections
+    document.getElementById("management").classList.add("hidden");
+    document.getElementById("board").classList.add("hidden");
 
-        bio.classList.toggle("line-clamp-4");
-        arrow.classList.toggle("rotate-180");
+    // reset tab styles
+    document
+      .getElementById("tab-management")
+      .classList.remove("text-brand-green");
+    document.getElementById("tab-board").classList.remove("text-brand-green");
 
-        button.querySelector("span").textContent = bio.classList.contains(
-          "line-clamp-4"
-        )
-          ? "Read more"
-          : "Read less";
-      });
-    });
+    document.getElementById("tab-management").classList.add("text-text-muted");
+    document.getElementById("tab-board").classList.add("text-text-muted");
+
+    // show selected section
+    document.getElementById(tab).classList.remove("hidden");
+
+    // activate selected tab
+    const activeTab = document.getElementById("tab-" + tab);
+    activeTab.classList.remove("text-text-muted");
+    activeTab.classList.add("text-brand-green");
+  }
+
+  // optional: ensure Management tab is active on load
+  document.addEventListener("DOMContentLoaded", () => {
+    showTab("management");
   });
 </script>
