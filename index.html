@@ -251,161 +251,15 @@
         </div>
 
         <!-- Tabs -->
-        <div class="mt-12 flex items-center justify-center gap-6 font-semibold">
-          <button
-            id="tab-management"
-            class="text-lg text-text-muted"
-            onclick="showTab('management')"
-          >
-            Management Team
-          </button>
-
-          <span class="text-text-muted">|</span>
-
-          <button
-            id="tab-board"
-            class="text-lg text-text-muted"
-            onclick="showTab('board')"
-          >
+        <div class="mt-12 flex items-start gap-6 font-semibold">
+          <button id="tab-board" class="text-lg text-brand-green">
             Board of Directors
           </button>
         </div>
 
-        <!-- MANAGEMENT TEAM -->
-        <div id="management" class="mt-16 space-y-16">
-          <!-- Person -->
-          <div class="flex gap-10">
-            <!-- Avatar -->
-            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
-              <img
-                src="/assets/images/directors/noface.png"
-                alt="Name of the Person"
-                class="h-full w-full object-cover grayscale"
-              />
-            </div>
-
-            <!-- Content -->
-            <div>
-              <h4 class="text-base font-semibold text-black">
-                Name of the Person
-                <span class="ml-2 text-sm font-normal text-text-secondary">
-                  CEO
-                </span>
-              </h4>
-
-              <p
-                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
-                id="bio-1"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                facilisi. Praesent tincidunt nibh et nibh gravida, et pulvinar
-                justo laoreet. Pellentesque laoreet felis, a aliquet enim
-                dignissim et. Aliquam euismod elementum lobortis facilisi.
-                Praesent tincidunt nibh gravida, et pulvinar justo laoreet.
-              </p>
-
-              <button
-                class="mt-2 text-sm font-semibold text-brand-green"
-                onclick="toggleBio('bio-1', this)"
-              >
-                Read more >>
-              </button>
-            </div>
-          </div>
-
-          <!-- Person -->
-          <div class="flex gap-10">
-            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
-              <img
-                src="/assets/images/directors/noface.png"
-                alt="Name of the Person"
-                class="h-full w-full object-cover grayscale"
-              />
-            </div>
-
-            <div>
-              <h4 class="text-base font-semibold text-black">
-                Name of the Person
-                <span class="ml-2 text-sm font-normal text-text-secondary">
-                  Deputy CEO
-                </span>
-              </h4>
-
-              <p
-                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
-                id="bio-2"
-              >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
-                facilisi. Praesent tincidunt nibh et nibh gravida, et pulvinar
-                justo laoreet. Pellentesque laoreet felis, a aliquet enim
-                dignissim et. Aliquam euismod elementum lobortis facilisi.
-              </p>
-
-              <button
-                class="mt-2 text-sm font-semibold text-brand-green"
-                onclick="toggleBio('bio-2', this)"
-              >
-                Read more >>
-              </button>
-            </div>
-          </div>
-
-          <div class="flex gap-10">
-            <!-- Avatar -->
-            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
-              <img
-                src="/assets/images/directors/behzad-bhesania.png"
-                alt="Mr. Behzad Bhesania"
-                class="h-full w-full object-cover grayscale"
-              />
-            </div>
-
-            <!-- Content -->
-            <div>
-              <h4 class="text-base font-semibold text-black">
-                Mr. Behzad Bhesania
-                <span class="ml-2 text-sm font-normal text-text-secondary"
-                  >CFO</span
-                >
-              </h4>
-
-              <!-- Bio -->
-              <p
-                id="bio-behzad"
-                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
-              >
-                Mr. Behzad has professional experience in the banking sector in
-                various roles, where he established, expanded and managed
-                business across developed and emerging markets in Asia. He is
-                currently a Senior Advisor to TPG, contributing to multiple
-                portfolio companies across India and Southeast Asia, including
-                Five Star, Grihum, SK Finance, Kakao Bank, and Union Bank of
-                Colombo. Before joining TPG, he was the Chief Executive Officer
-                (CEO) at Citibank Hong Kong and held multiple senior leadership
-                roles during his 20-year tenure there. He also served as the
-                Managing Director and Regional Head of Asia for Private and
-                Business Clients at Deutsche Bank. Additionally, he was the CEO
-                of Maritime Bank in Vietnam, where he led significant business
-                growth. He currently serves on the Board of Directors of YES
-                Bank, chairing the Credit Committee and playing a key role in
-                its restructuring. He holds a Master of Business Administration
-                from Rice University and a Bachelor of Technology degree from
-                IIT Bombay.
-              </p>
-
-              <!-- Toggle -->
-              <button
-                class="mt-2 text-sm font-semibold text-brand-green"
-                onclick="toggleBio('bio-behzad', this)"
-              >
-                Read more >>
-              </button>
-            </div>
-          </div>
-        </div>
-
         <!-- BOARD OF DIRECTORS -->
-        <div id="board" class="mt-16 hidden space-y-16">
+        <div id="board" class="mt-16 space-y-16">
+          <!-- Om Prakash Bhatt -->
           <div class="flex gap-10">
             <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
@@ -418,7 +272,7 @@
               <h4 class="text-base font-semibold text-black">
                 Mr. Om Prakash Bhatt
                 <span class="ml-2 text-sm font-normal text-text-secondary">
-                  Chairman
+                  Independent Director
                 </span>
               </h4>
 
@@ -429,18 +283,21 @@
                 Mr. Bhatt has over 40 years of professional experience in the
                 banking sector. He served as the Chairman of the State Bank of
                 India (SBI), the country’s largest public sector bank, from 2006
-                to 2011, during which he led a major transformation and oversaw
-                a five-fold growth in loans and deposits within five years. He
-                also served as Chairman of the Indian Banks Association (IBA),
-                playing a significant role in economic diplomacy. In addition,
-                he has served on the Global Board of Standard Chartered Bank and
-                on the boards of several Tata Group companies. He is currently
-                on the Board of Coforge, SBI Global Factors Limited, Aadhar
-                Housing Finance and Tata Motors. He was honoured with the
-                ‘Banker of the Year’ award by Business Standard and the ‘CNN-IBN
-                Indian of the Year’ award in 2007. Mr. Bhatt holds a Bachelor’s
-                Degree in Science from DAV College, Dehradun, and a Master’s
-                Degree in English Literature.
+                to 2011. During his tenure, he played a pivotal role in
+                transforming the institution and oversaw a five-fold growth in
+                loans and deposits within five years.
+                <br /><br />
+                In addition to SBI, he served as Chairman of the Indian Banks
+                Association (IBA), contributing significantly to economic
+                diplomacy. He has been a member of the Global Board of Standard
+                Chartered Bank and the boards of several Tata Group companies.
+                He currently serves on the boards of Coforge, SBI Global Factors
+                Limited, Aadhar Housing Finance and Tata Motors. He has been
+                honoured with the ‘Banker of the Year’ award by Business
+                Standard and the ‘CNN-IBN Indian of the Year’ award in 2007.
+                <br /><br />
+                Mr. Bhatt holds a Bachelor’s Degree in Science from DAV College,
+                Dehradun, and a Master’s Degree in English Literature.
               </p>
 
               <button
@@ -452,6 +309,7 @@
             </div>
           </div>
 
+          <!-- Farokh Subedar -->
           <div class="flex gap-10">
             <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
@@ -473,21 +331,23 @@
                 class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
               >
                 Mr. Subedar has over 40 years of experience in business
-                management, finance, taxation, law and accounting. He is
-                currently serving as the Chairman and Independent Director of
-                DCB Bank. Prior to this, he was the Chief Operating Officer of
-                Tata Sons Limited, having earlier held the positions of Chief
-                Financial Officer and Company Secretary. His association with
-                the Tata Group spans over 38 years, during which he worked
-                closely with several Tata Group companies and Tata Non-Banking
-                Financial Companies, contributing significantly to the group’s
-                growth and governance. He has also served as President of the
-                Bombay Chamber of Commerce and Industry and has been actively
-                involved with NGOs across diverse sectors, reflecting his
-                commitment to social causes. Mr. Subedar holds a Bachelor’s
-                Degree in Commerce and is a Member of the Institute of Chartered
-                Accountants of India and the Institute of Company Secretaries of
-                India.
+                management, finance, taxation, law and accounting. He currently
+                serves as the Chairman and Independent Director of DCB Bank.
+                Earlier, he was the Chief Operating Officer of Tata Sons
+                Limited, having previously held the roles of Chief Financial
+                Officer and Company Secretary.
+                <br /><br />
+                His association with the Tata Group spans over 38 years, during
+                which he worked closely with multiple Tata Group companies and
+                Tata Non-Banking Financial Companies, contributing to their
+                growth and governance. He also served as President of the Bombay
+                Chamber of Commerce and Industry and has been actively involved
+                with NGOs across diverse sectors, reflecting his commitment to
+                social causes.
+                <br /><br />
+                Mr. Subedar holds a Bachelor’s Degree in Commerce and is a
+                Member of the Institute of Chartered Accountants of India and
+                the Institute of Company Secretaries of India.
               </p>
 
               <button
@@ -499,6 +359,100 @@
             </div>
           </div>
 
+          <!-- Dinesh Khara -->
+          <div class="flex gap-10">
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
+              <img
+                src="/assets/images/directors/dinesh-khara.png"
+                alt="Mr. Dinesh Khara"
+              />
+            </div>
+
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Mr. Dinesh Khara
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  Independent Director
+                </span>
+              </h4>
+
+              <p
+                id="bio-khara"
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+              >
+                Mr. Khara served as the Chairman of the State Bank of India from
+                2020 to 2024 and has over 35 years of experience across all
+                facets of banking. He joined SBI as a Probationary Officer in
+                1984 and went on to hold several senior leadership roles,
+                including Managing Director for Global Banking and Subsidiaries,
+                Managing Director for Associates and Subsidiaries, and MD & CEO
+                of SBI Mutual Funds.
+                <br /><br />
+                He has led key verticals such as International Banking, Large
+                Corporate Banking and Treasury, and has overseen non-banking
+                subsidiaries including SBI Cards, SBI Mutual Fund, SBI Life and
+                SBI General Insurance, among others.
+                <br /><br />
+                Mr. Khara holds a postgraduate degree in Commerce from the Delhi
+                School of Economics and an MBA from FMS, New Delhi.
+              </p>
+
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-khara', this)"
+              >
+                Read more >>
+              </button>
+            </div>
+          </div>
+
+          <!-- Sadashiv Rao -->
+          <div class="flex gap-10">
+            <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
+              <img
+                src="/assets/images/directors/sadashiv-rao.png"
+                alt="Mr. Sadashiv Rao"
+              />
+            </div>
+
+            <div>
+              <h4 class="text-base font-semibold text-black">
+                Mr. Sadashiv Rao
+                <span class="ml-2 text-sm font-normal text-text-secondary">
+                  Independent Director
+                </span>
+              </h4>
+
+              <p
+                id="bio-rao"
+                class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
+              >
+                Mr. Sadashiv S. Rao is the former founding CEO of NIIF
+                Infrastructure Finance Limited (NIIF IFL), where he led the
+                institution from 2015 to 2022, building it into a leading NBFC
+                focused on operating infrastructure projects.
+                <br /><br />
+                He has over 38 years of experience in project finance,
+                investment banking and advisory services, including 18 years at
+                IDFC, where he ultimately served as Chief Risk Officer. His
+                career also includes leadership roles at ICICI, HPCL and Procter
+                & Gamble, along with multiple board directorships across
+                financial institutions.
+                <br /><br />
+                Mr. Rao holds a B.Tech from IIT Kanpur and an MBA from IIM
+                Bangalore.
+              </p>
+
+              <button
+                class="mt-2 text-sm font-semibold text-brand-green"
+                onclick="toggleBio('bio-rao', this)"
+              >
+                Read more >>
+              </button>
+            </div>
+          </div>
+
+          <!-- Atul Malik -->
           <div class="flex gap-10">
             <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
@@ -519,23 +473,22 @@
                 id="bio-atul"
                 class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
               >
-                Mr. Malik has extensive professional experience in the banking
-                sector, having established, expanded and managed businesses
-                across developed and emerging markets in Asia. He is currently a
-                Senior Advisor to TPG, contributing to multiple portfolio
-                companies across India and Southeast Asia. Prior to this, he was
-                the Chief Executive Officer (CEO) of Citibank Hong Kong and held
-                multiple senior leadership positions during his 20-year tenure
-                at Citibank. He also served as the Managing Director and
-                Regional Head of Asia for Private and Business Clients at
-                Deutsche Bank. Additionally, he was the CEO of Maritime Bank in
-                Vietnam, where he led significant business growth. He currently
-                serves on the Board of Directors of YES Bank, where he chairs
-                the Credit Committee and has played a key role in the bank’s
-                restructuring. Mr. Malik holds a Master of Business
-                Administration degree from Rice University in the United States
-                and a Bachelor of Technology degree from the Indian Institute of
-                Technology (IIT) Bombay.
+                Mr. Malik has extensive experience in the banking sector, having
+                established, expanded and managed businesses across developed
+                and emerging markets in Asia. He currently serves as a Senior
+                Advisor to TPG, supporting multiple portfolio companies across
+                India and Southeast Asia.
+                <br /><br />
+                Prior to this, he was the Chief Executive Officer of Citibank
+                Hong Kong and held several senior leadership roles during his
+                20-year tenure at Citibank. He also served as Managing Director
+                and Regional Head of Asia for Private and Business Clients at
+                Deutsche Bank, and as CEO of Maritime Bank in Vietnam.
+                <br /><br />
+                Mr. Malik currently serves on the Board of Directors of YES
+                Bank, where he chairs the Credit Committee and has played a key
+                role in the bank’s restructuring. He holds an MBA from Rice
+                University and a B.Tech from IIT Bombay.
               </p>
 
               <button
@@ -547,6 +500,7 @@
             </div>
           </div>
 
+          <!-- Ankur Thadani -->
           <div class="flex gap-10">
             <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
@@ -568,21 +522,22 @@
                 class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
               >
                 Mr. Thadani is a Partner and India Head of TPG Growth, RISE and
-                RISE Climate. He has led investments across the healthcare,
-                energy transition and consumer sectors in India and the South
-                Asia region. Prior to joining TPG in 2013, he worked with India
-                Equity Partners, an Indian private equity fund, where he focused
-                on investments in the consumer and healthcare sectors. He
-                currently serves on the Boards of Directors of TATA Passengers
-                Electric Mobility Ltd., Dr. Agarwal’s Health Care Ltd., Learning
-                with N Private Ltd., Rhea Healthcare Private Ltd., Nova Medical
-                Centers Private Ltd. and API Holdings. He has been recognised by
-                The Economic Times as one of India’s 40 under 40 Business
-                Leaders and is a member of the Indian Venture and Alternate
-                Capital Association’s Climate Council. Mr. Thadani holds a
-                Master of Business Administration degree from the Indian
-                Institute of Foreign Trade, where he was awarded a Gold Medal
-                for all-round achievement.
+                RISE Climate. He has led investments across healthcare, energy
+                transition and consumer sectors in India and the South Asia
+                region.
+                <br /><br />
+                Prior to joining TPG in 2013, he worked with India Equity
+                Partners, focusing on consumer and healthcare investments. He
+                currently serves on the boards of Tata Passenger Electric
+                Mobility Ltd., Dr. Agarwal’s Health Care Ltd., Learning with N
+                Private Ltd., Rhea Healthcare Private Ltd., Nova Medical Centers
+                Private Ltd. and API Holdings.
+                <br /><br />
+                He has been recognised as one of India’s 40 under 40 Business
+                Leaders by The Economic Times and is a member of the Indian
+                Venture and Alternate Capital Association’s Climate Council. Mr.
+                Thadani holds an MBA from the Indian Institute of Foreign Trade,
+                where he was awarded a Gold Medal for all-round achievement.
               </p>
 
               <button
@@ -594,6 +549,7 @@
             </div>
           </div>
 
+          <!-- Sanjeev Mehra -->
           <div class="flex gap-10">
             <div class="h-32 w-32 flex-shrink-0 overflow-hidden rounded-full">
               <img
@@ -606,7 +562,7 @@
               <h4 class="text-base font-semibold text-black">
                 Mr. Sanjeev Mehra
                 <span class="ml-2 text-sm font-normal text-text-secondary">
-                  Managing Director
+                  Director
                 </span>
               </h4>
 
@@ -615,13 +571,14 @@
                 class="mt-3 max-w-3xl text-sm leading-relaxed text-text-secondary line-clamp-4"
               >
                 Mr. Mehra is a Managing Director of TPG Capital Asia, based in
-                Mumbai. He focuses on investments in the Financial Services and
-                Consumer sectors and has been involved in several TPG portfolio
-                companies, including Five Star Business Finance, Grihum Housing
-                Finance, Shriram Capital, Shriram General Insurance and Shriram
-                Life Insurance. Prior to joining TPG in 2018, he worked with
-                WestBridge Capital. Mr. Mehra holds a Master of Business
-                Administration degree from London Business School and an
+                Mumbai. He focuses on investments in the financial services and
+                consumer sectors and has been involved with several TPG
+                portfolio companies, including Five Star Business Finance,
+                Grihum Housing Finance, Shriram Capital, Shriram General
+                Insurance and Shriram Life Insurance.
+                <br /><br />
+                Prior to joining TPG in 2018, he worked with WestBridge Capital.
+                Mr. Mehra holds an MBA from London Business School and an
                 undergraduate degree in Economics from the University of Delhi.
               </p>
 
@@ -967,34 +924,4 @@
     bio.classList.toggle("line-clamp-4");
     btn.textContent = isClamped ? "Read less <<" : "Read more >>";
   }
-</script>
-
-<script>
-  function showTab(tab) {
-    // hide both sections
-    document.getElementById("management").classList.add("hidden");
-    document.getElementById("board").classList.add("hidden");
-
-    // reset tab styles
-    document
-      .getElementById("tab-management")
-      .classList.remove("text-brand-green");
-    document.getElementById("tab-board").classList.remove("text-brand-green");
-
-    document.getElementById("tab-management").classList.add("text-text-muted");
-    document.getElementById("tab-board").classList.add("text-text-muted");
-
-    // show selected section
-    document.getElementById(tab).classList.remove("hidden");
-
-    // activate selected tab
-    const activeTab = document.getElementById("tab-" + tab);
-    activeTab.classList.remove("text-text-muted");
-    activeTab.classList.add("text-brand-green");
-  }
-
-  // optional: ensure Management tab is active on load
-  document.addEventListener("DOMContentLoaded", () => {
-    showTab("management");
-  });
 </script>
